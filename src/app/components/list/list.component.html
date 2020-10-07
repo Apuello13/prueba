@@ -1,0 +1,27 @@
+<div class="row mt-2">
+    <div class="col-lg-6"></div>
+    <div class="col-lg-6">
+        <button routerLink="/add" class="btn btn-success btn-large float-right">Agregar Empleado</button>
+    </div>
+</div>
+<table class="table table-borderless mt-3">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empleado of empleados">
+        <th scope="row">{{empleado.id}}</th>
+        <td><a [routerLink]="['/ver/',empleado.id]">{{empleado.nombre}}</a></td>
+        <td>{{empleado.apellido}}</td>
+        <td>
+            <button [routerLink]="['/edit/',empleado.id]" class="btn btn-primary btn-small mr-3">Editar</button>
+            <button class="btn btn-danger btn-small" (click)="delete(empleado.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

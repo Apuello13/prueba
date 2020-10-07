@@ -1,0 +1,23 @@
+<div class="card mt-3" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Empleado</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Nombre</h6>
+      <p class="card-text">{{empleado.nombre}}</p>
+      <h6 class="card-subtitle mb-2 text-muted">Apellido</h6>
+      <p class="card-text">{{empleado.apellido}}</p>
+      <h6 class="card-subtitle mb-2 text-muted">Identificación</h6>
+      <p class="card-text">{{empleado.identificacion}}</p>
+      <h6 class="card-subtitle mb-2 text-muted">Cargo</h6>
+      <p class="card-text">{{empleado.cargo}}</p>
+      <h6 class="card-subtitle mb-2 text-muted">Fecha de nacimiento</h6>
+      <p class="card-text">{{empleado.fecha_nacimiento | date: 'longDate'}}</p>
+      <h6 class="card-subtitle mb-2 text-muted">Nombre del Jefe</h6>
+      <p class="card-text">{{empleado.nombre_jefe}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <button routerLink="/list" class="btn btn-secondary btn-small float-left mt-5">Regresar</button>
+    </div>
+    <div class="col-lg-6"></div>
+</div>
